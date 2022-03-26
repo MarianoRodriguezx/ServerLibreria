@@ -17,15 +17,21 @@ class CategoriaController {
     }
 
     async store({response, request}){
-        const validacion = await validate(request.all(), rules)
 
-        if(validation.fails()){
-            response.status(400).json({mensaje:"error en datos"})
+        try{
+            //const validacion = await validate(request.all(), rules)
+
+            //if(validation.fails()){
+            //    response.status(400).json({mensaje:"error en datos"})
+            //}
+
+            //else{
+           await Categoria.create(request.all())
+            //    response.status(200).json({mensaje:"se inserto correctamente", data: validacion})
+            //}
         }
+        catch(error){
 
-        else{
-            Categoria.create(validacion)
-            response.status(200).json({mensaje:"se inserto correctamente", data: validacion})
         }
     }
 }

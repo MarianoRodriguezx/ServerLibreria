@@ -22,3 +22,6 @@ Route.get('/', () => {
 
 Route.resource('categorias', 'CategoriaController')
 Route.resource('roles', 'RoleController')
+
+Route.post('registrar', 'UserController.Registrar')
+Route.post('login', 'UserController.Login')
